@@ -1,4 +1,4 @@
-// Using class hierarchy and composition, create a binary tree. A binary tree has a root node. We can insert a node. We can traverse first the left subtree, then the right (sequential traversal) and the reverse bypass. A node can be placed in a binary search tree only as a end node. If the tree is empty, a new instance of the class is created a node of a tree and a node contained in a tree. If the tree is not empty, then the program compares what is inserted into the value tree with the value at the root node and if less, it places the subtrees on the left, and if more, then on the right. If the values are equal, then a message is displayed that the repeat is not inserted.
+// Використовуючи ієрархію й композицію класів, створити бінарне дерево. У бінарного дерева є кореневий вузол. Ми можемо вставляти вузол. Ми можемо обходити спочатку ліве під-дерево, потім праве (послідовний обхід) і зворотний обхід. Вузол може бути поміщений у дерево двійкового пошуку тільки в якості кінцевого вузла. Якщо дерево є порожнім, то створюється новий екземпляр класу вузол дерева й вузол міститься в дерево. Якщо дерево не є порожнім, то програма порівнює, що вставляється в дерево значення зі значенням у кореневому вузлі і якщо менше, те поміщає в ліві під-дерева, а якщо більше, те в праві. Якщо значення рівні, то виводиться повідомлення, що повтор і не вставляється.
 
 #include <iostream>
 #include <string>
@@ -89,6 +89,10 @@ public:
         {
             root = node;
         }
+        else if (root->getValue() == value)
+        {
+            cout << "Value " << value << " already exists" << endl;
+        }
         else
         {
             Node *current = root;
@@ -158,6 +162,8 @@ int main()
     tree.insert(1);
     tree.insert(4);
     tree.insert(6);
+    tree.insert(8);
+    tree.insert(5);
     tree.insert(8);
     tree.print();
     cout << endl;
