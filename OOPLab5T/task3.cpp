@@ -18,6 +18,12 @@ public:
         this->row = row.row;
         cout << "Copy constructor" << endl;
     }
+    Row &operator=(const Row &row)
+    {
+        this->row = row.row;
+        cout << "Operator =" << endl;
+        return *this;
+    }
     string getRow()
     {
         return row;
@@ -46,6 +52,12 @@ public:
     {
         cout << "NumberRow copy constructor" << endl;
     }
+    NumberRow &operator=(const NumberRow &numberRow)
+    {
+        Row::operator=(numberRow);
+        cout << "NumberRow operator =" << endl;
+        return *this;
+    }
     void print()
     {
         cout << "NumberRow: " << getRow() << endl;
@@ -64,6 +76,12 @@ int main()
     numberRow.print();
 
     NumberRow numberRow2(numberRow);
+    numberRow2.print();
+
+    row = numberRow2;
+    row.print();
+
+    numberRow2 = numberRow;
     numberRow2.print();
 
     return 0;

@@ -164,7 +164,6 @@ int main()
     tree.insert(6);
     tree.insert(8);
     tree.insert(5);
-    tree.insert(8);
     tree.print();
     cout << endl;
     tree.printReverse();

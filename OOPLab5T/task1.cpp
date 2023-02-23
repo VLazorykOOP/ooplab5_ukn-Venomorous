@@ -123,12 +123,14 @@ public:
 
 int main()
 {
-    // Point point(1, 2);
-    // point.print();
-    // point.setX(3);
-    // point.setY(4);
-    // point.print();
+    cout << "Point:" << endl;
+    Point point(1, 2);
+    point.print();
+    point.setX(3);
+    point.setY(4);
+    point.print();
 
+    cout << "Circle:" << endl;
     Circle circle(1, 2, 3);
     circle.print();
     circle.setX(4);
@@ -136,6 +138,7 @@ int main()
     circle.setRadius(6);
     circle.print();
 
+    cout << "Ellipse:" << endl;
     Ellipse ellipse(1, 2, 3, 4);
     ellipse.print();
     ellipse.setX(5);
